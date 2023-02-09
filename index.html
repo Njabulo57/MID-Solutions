@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MID Solutionz</title>
+    <!--Font awesome CDN-->
+    <script src="https://kit.fontawesome.com/eca2d6ebce.js" crossorigin="anonymous"></script>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+            </div>
+            <a href="index.html" class="logo"><img src="MID Solutions HD Logo UPDATED White.svg" alt=""></a>
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <ul class="contact-list">
+                    <li class="contact-item">
+                        <a href="" class="contact-link"><i class="fa-brands fa-whatsapp"></i></a>
+                    </li>
+                    <li class="contact-item">
+                        <a href="" class="contact-link"><i class="fa-regular fa-envelope"></i></a>
+                    </li>
+                    <li class="contact-item">
+                        <a href="" class="contact-link"><i class="fa-brands fa-linkedin"></i></a>
+                    </li>
+                    <li class="contact-item">
+                        <a href="" class="contact-link"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </ul>
+        </nav>
+    </header>
+    <!-- Header Ends -->
+    <section class="hero" id="hero">
+        <div class="blur">
+            <div class="blur-block"></div>
+            <div class="blur-effect">
+                <div class="headlines">
+                    <p>Innovative<span>+</span>Timeless</p>
+                    <h1>Architecture</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Ends -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        // select element function
+        const selectElement = function(element) {
+        return document.querySelector(element);
+        };
+
+        const menuToggler = selectElement('.menu-toggle');
+        let body = selectElement('body');
+
+        menuToggler.addEventListener('click', function () {
+            body.classList.toggle('open');
+            
+            if($("body").hasClass("open")){
+                $(".logo img").attr("src","MID Solutions HD Logo UPDATED Black.svg");
+            } else {
+                $(".logo img").attr("src","MID Solutions HD White Logo.png");
+            }
+        });
+    </script>
+    <script src="velocity.min.js"></script>
+</body>
+</html>

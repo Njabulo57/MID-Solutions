@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-MID Solutionz</title>
+    <!--Font awesome CDN-->
+    <script src="https://kit.fontawesome.com/eca2d6ebce.js" crossorigin="anonymous"></script>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style(projects).css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+            </div>
+            <a href="index.html" class="logo"><img src="MID Solutions HD Logo UPDATED Black.svg" alt=""></a>
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <ul class="contact-list">
+                    <li class="contact-item">
+                        <a href="" class="contact-link"><i class="fa-brands fa-whatsapp"></i></a>
+                    </li>
+                    <li class="contact-item">
+                        <a href="" class="contact-link"><i class="fa-regular fa-envelope"></i></a>
+                    </li>
+                    <li class="contact-item">
+                        <a href="" class="contact-link"><i class="fa-brands fa-linkedin"></i></a>
+                    </li>
+                    <li class="contact-item">
+                        <a href="" class="contact-link"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </ul>
+        </nav>
+    </header>
+    <!-- Header Ends -->
+    <section class="prjoects">
+        <div class="container">
+            <div class="tab">
+                <button class="tablinks" onclick="openProject(event, 'Residential')" id="defaultOpen">Residential</button>
+                <button class="tablinks" onclick="openProject(event, 'Public')">Public</button>
+                <button class="tablinks" onclick="openProject(event, 'Unbuilt')">Unbuilt</button>
+            </div>
+            <div id="Residential" class="tabcontent">
+                <div class="owl-carousel"">
+                    <div class="slider-card">
+                        <a data-name="House Johnson" href="#"><img src="Johnson.png" alt=""></a>
+                        <!-- <a href="#">House Johnson</a> -->
+                    </div>
+                    <div class="slider-card">
+                        <a data-name="House Sgalelana" href="#"><img src="Sgalelana.png" alt=""></a>
+                    </div>
+                    <div class="slider-card">
+                        <a data-name="House Machethe" href="#"><img src="Machethe.png" alt=""></a>
+                    </div>
+                    <div class="slider-card">
+                        <a data-name="House Louie" href="#"><img src="Louie.png" alt=""></a>
+                    </div>
+                    <div class="slider-card">
+                        <a data-name="Neoclassical Home" href="#"><img src="Neoclassical.png" alt=""></a>
+                    </div>
+                    <div class="slider-card">
+                        <a data-name="Bitprop Proposal" href="#"><img src="Bitprop.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div id="Public" class="tabcontent">
+                
+            </div>
+            <div id="Unbuilt" class="tabcontent">
+                
+            </div>
+        </div>
+    </section>
+    <!-- Projects Ends -->
+    <footer class="footer">
+        <div class="contact-burger">
+            <ul class="contact">
+                <li class="info-item">
+                    <a href="" class="info-link"><i class="fa-brands fa-whatsapp"></i></a>
+                </li>
+                <li class="info-item">
+                    <a href="" class="info-link"><i class="fa-regular fa-envelope"></i></a>
+                </li>
+                <li class="info-item">
+                    <a href="" class="info-link"><i class="fa-brands fa-linkedin"></i></a>
+                </li>
+                <li class="info-item">
+                    <a href="" class="info-link"><i class="fa-brands fa-instagram"></i></a>
+                </li>
+            </ul>
+        </div>
+        <h3>© 2023 MID Solutions. All rights reserved.</h3>
+    </footer>
+    <!-- Footer Ends -->
+    <script>
+        // select element function
+        const selectElement = function(element) {
+        return document.querySelector(element);
+        };
+
+        const menuToggler = selectElement('.menu-toggle');
+        let body = selectElement('body');
+
+        menuToggler.addEventListener('click', function () {
+            body.classList.toggle('open');
+        });
+
+        function openProject(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+      
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function(){
+          $(".owl-carousel").owlCarousel({
+            center: true,
+            items:2,
+            loop:true,
+            margin:20,
+            nav:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                // 600:{
+                //     items:3  
+                // },
+                1024:{
+                    items:3
+                }
+            }
+          });
+        });
+        
+    </script>
+</body>
+</html>
