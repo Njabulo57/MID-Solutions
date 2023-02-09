@@ -255,8 +255,8 @@ h1{
    letter-spacing: 1rem;
    text-transform: uppercase;
    opacity: 0;
-   animation: slideleft .6s forwards;
-   animation-delay: .8s;
+   animation: slideleft .8s forwards;
+   animation-delay: 0.8s;
 }
 
 span{
@@ -268,7 +268,7 @@ p{
   font-family: minimal;
   letter-spacing: .5rem;
   opacity: 0;
-  animation: slideright .6s forwards;
+  animation: slideright .8s forwards;
    animation-delay: 1s;
 }
 
